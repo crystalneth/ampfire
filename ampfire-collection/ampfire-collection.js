@@ -684,6 +684,9 @@ Ampfire.Collection = Ampersand.Collection.extend({
       default:
         throw new Error('url parameter required');
     }
+    if(options.firebaseOptions && options.firebaseOptions.limitToLast) {
+      this.firebase = this.firebase.limitToLast(options.firebaseOptions.limitToLast);
+    }
 
     // if we are not autoSyncing, the model needs
     // to be a non-autoSynced model
