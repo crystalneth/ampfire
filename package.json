@@ -1,0 +1,44 @@
+{
+  "name": "ampfire-tapcast",
+  "description": "Tapcast edits to Ampfire",
+  "version": "0.3.0",
+  "author": {
+    "name": "Tom McGurl",
+    "email": "Tom.McGurl@gmail.com"
+  },
+  "homepage": "https://github.com/meetfm/ampfire",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meetfm/ampfire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meetfm/ampfire/issues"
+  },
+  "keywords": [
+    "ampersand",
+    "firebase",
+    "realtime"
+  ],
+  "files": [
+    "ampfire-collection.js",
+    "BackboneFireLICENSE",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "ampersand-rest-collection": "^4.0.0",
+    "ampersand-model": "^5.0.3",
+    "firebase": "^2.2.7",
+    "lodash": "^3.9.3"
+  },
+  "license": "MIT",
+  "main": "ampfire-collection.js",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
