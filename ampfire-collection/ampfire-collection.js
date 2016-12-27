@@ -290,7 +290,7 @@ var OnceCollection = (function() {
      * Ampfire.sync with the correct method.
      */
     create: function(model, options) {
-      model.id = Ampfire._getKey(this.firebase.push());
+      model.id = Ampfire._getKey(this.firebase.ref().push());
       options = _.extend({
         autoSync: false
       }, options);
@@ -302,7 +302,7 @@ var OnceCollection = (function() {
      * Ampfire.sync with the correct method.
      */
     add: function(model, options) {
-      model.id = Ampfire._getKey(this.firebase.push());
+      model.id = Ampfire._getKey(this.firebase.ref().push());
       options = _.extend({
         autoSync: false
       }, options);
@@ -428,7 +428,7 @@ var SyncCollection = (function() {
 
       for (var i = 0; i < parsed.length; i++) {
         var model = parsed[i];
-        var childRef = this.firebase.child(model.id);
+        var childRef = this.firebase.ref().child(model.id);
         if (options.silent === true) {
           this._suppressEvent = true;
         }
@@ -493,7 +493,7 @@ var SyncCollection = (function() {
         var model = models[i];
 
         if (!model.id) {
-          model.id = Ampfire._getKey(this.firebase.push());
+          model.id = Ampfire._getKey(this.firebase.ref().push());
         }
 
         // call Ampersand's prepareModel to apply options
@@ -651,7 +651,7 @@ var SyncCollection = (function() {
       options = options ? _.clone(options) : {};
       options.success =
         _.isFunction(options.success) ? options.success : function() {};
-      var childRef = this.firebase.child(model.id);
+      var childRef = this.firebase.ref().child(model.id);
       Ampfire._setWithCheck(childRef, null, _.bind(options.success, model));
     },
 
