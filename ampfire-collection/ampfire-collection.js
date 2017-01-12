@@ -567,7 +567,7 @@ var SyncCollection = (function() {
     // remove an item from the collection when removed remotely
     // provides the ability to remove siliently
     _childRemoved: function(snap) {
-      /*var model = Ampfire._checkId(snap);
+      var model = Ampfire._checkId(snap);
 
       if (this._suppressEvent === true) {
         this._suppressEvent = false;
@@ -580,7 +580,7 @@ var SyncCollection = (function() {
         // trigger sync because data has been received from the server
         this.trigger('sync', this);
         Ampersand.Collection.prototype.remove.call(this, [model]);
-      }*/
+      }
     },
 
     // Add handlers for all models in this collection, and any future ones

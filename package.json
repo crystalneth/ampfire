@@ -1,7 +1,7 @@
 {
   "name": "ampfire-tapcast",
   "description": "Tapcast edits to Ampfire",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": {
     "name": "Tom McGurl",
     "email": "Tom.McGurl@gmail.com"
